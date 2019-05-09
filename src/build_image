@@ -1,0 +1,3 @@
+#!/bin/bash
+docker build -t react .
+docker run --name react -it -d react /bin/bash

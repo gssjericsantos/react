@@ -1,0 +1,36 @@
+#!/bin/bash
+PS3='Please enter the number of your choice: '
+
+options[0]="Reactjs Build"
+options[1]="Quit"
+
+echo -e "
++ + + + + + + + + + + + + + + + + + + + + + + + + +
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                 Command Options:
+
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+                   DESCRIPTIONS
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+1) Reactjs Build        => Build Reactjs Image
+2) Quit                 => Close the panel
++ + + + + + + + + + + + + + + + + + + + + + + + + +
+"
+cd '..'
+pwd
+
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Reactjs Build")
+            cd reactjs/src
+            bash build_image
+            break
+            ;; 
+        "Quit")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
