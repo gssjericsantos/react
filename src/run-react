@@ -1,0 +1,9 @@
+#!/bin/bash
+pwd
+cd ~/Desktop
+pwd
+npm init -y
+npm install -g create-react-app
+create-react-app reactjs-test-project
+cd reactjs-test-project
+npm start
