@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd react
+npm init -y
+npm install -g create-react-app
+create-react-app projectname
+cd projectname
+npm start
